@@ -11,8 +11,8 @@ public class Death : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
 
-    private Text deathCounter;
-    private int deathCount = 0;
+    public Text deathCounter;
+    private static int deathCount = 0;
 
     private Color color;
     void Start()
@@ -25,7 +25,7 @@ public class Death : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        deathCounter.text = deathCount.ToString();
+        deathCounter.text = "Deaths: " + deathCount.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D coll){
