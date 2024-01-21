@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ItemCollector : MonoBehaviour
 {
     // Start is called before the first frame update
+    static public bool reflectPhase=false;
+
     private Rigidbody2D rb;
     [SerializeField]private Text secretFileCountText;
-    private float secretFileLeft=5;
+ 
+    private float secretFileLeft=1;
     [SerializeField]private FileSpawner fileSpawner;
-
-    public bool reflectPhase=false;
-
 
 
     void Start()
@@ -34,13 +35,14 @@ public class ItemCollector : MonoBehaviour
             Destroy(coll.gameObject);
             secretFileLeft--;
             secretFileCountText.text="Files left to collect: "+secretFileLeft;
-            
 
             if(secretFileLeft==0){
                 if(secretFileCountText!=null){
                     // Destroy(secretFileCountText);
                     GameObject.Find("Secret File Spawner").GetComponent<FileSpawner>().enabled=false;
                     reflectPhase=true;
+                    Debug.Log("no files left to collect, reflect phase true");
+
                 }                
             }
 

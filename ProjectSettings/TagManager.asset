@@ -8,6 +8,7 @@ TagManager:
   - Traps
   - SecretFile
   - Trap
+  - BossBullet
   layers:
   - Default
   - TransparentFX

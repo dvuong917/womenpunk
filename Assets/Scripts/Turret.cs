@@ -31,6 +31,8 @@ public class EnemyShooter : MonoBehaviour
 
     void shoot()
     {
-        Instantiate(bullet, bulletPos.position, Quaternion.identity);
-    }
+        var temp = Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        Destroy(temp, 4.0f);
+    } 
+
 }

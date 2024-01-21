@@ -7,6 +7,8 @@ public class TurretBulletScript : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
 
+    static public bool reflectPhase;
+
     public float bulletForce = 8;
 
     // Start is called before the first frame update
@@ -22,6 +24,10 @@ public class TurretBulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(ItemCollector.reflectPhase){
+
+            // gameObject.GetComponent<CircleCollider2D>().isTrigger = false;
+    
+        }
     }
 }

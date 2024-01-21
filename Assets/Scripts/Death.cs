@@ -25,11 +25,19 @@ public class Death : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D coll){
-        if(coll.gameObject.CompareTag("Traps")){
-            Debug.Log("colided with trap");
+        if(ItemCollector.reflectPhase){
+            if(coll.gameObject.CompareTag("BossBullet")){
+                Debug.Log("bounce with bossBullet");
+                coll.gameObject.GetComponent<CircleCollider2D>().isTrigger=false;
+            }
+        }
+        else if(!ItemCollector.reflectPhase && coll.gameObject.CompareTag("Traps")||coll.gameObject.CompareTag("BossBullet")){
+            Debug.Log("collided with trap");
             Die();
         }
+        
     }
+
     private void Die(){
         Debug.Log("player died");
         spriteRenderer.color=Color.red;
