@@ -8,6 +8,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]private float speed;
     [SerializeField]private float jumpForce=8f;
+    private SpriteRenderer spriteRenderer;
+
+
+    private Animator anim;
     private LayerMask ground;
     bool isOnGround=false;
     private float xDir;
@@ -16,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();    
+        spriteRenderer=GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -23,11 +28,21 @@ public class PlayerMovement : MonoBehaviour
     {
         xDir=Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed*xDir,rb.velocity.y);
+        
+
+        if(xDir<0){
+            spriteRenderer.flipX=true;
+
+        }
+        if(xDir>0){
+            spriteRenderer.flipX=false;
+        }
 
         if(Input.GetButtonDown("Jump")&&isOnGround){
             Vector2 jumpVector=new Vector2(rb.velocity.x,jumpForce);
             rb.AddForce(jumpVector);
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D other){
