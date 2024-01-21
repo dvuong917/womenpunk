@@ -115,7 +115,7 @@ SpriteRenderer:
   m_Size: {x: 4.8, y: 1.63}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &4983673418333183014
@@ -172,8 +172,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8571386212389551571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ee2cf7c92092945a8e4ba13a2c2010, type: 3}
+  m_Script: {fileID: 11500000, guid: e9d3815568cc4984a99d5f978adfc378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1245502847833018035, guid: 97d5b7c82e4e00442a0ebc81698847ab, type: 3}
+  bullet: {fileID: 1245502847833018035, guid: efac2b889fe08814ebc6d5317d601211, type: 3}
   bulletPos: {fileID: 6334822039651486611}

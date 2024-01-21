@@ -48,6 +48,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2761865042742803166, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 152571927, guid: 06edd3f0fe9d3d349ac6e181eed8c0f9, type: 3}
+    - target: {fileID: 4218270584869103564, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
+      propertyPath: m_TagString
+      value: Traps
+      objectReference: {fileID: 0}
     - target: {fileID: 6958894872415902983, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
       propertyPath: m_Name
       value: EnemySlammer Variant
@@ -55,6 +63,34 @@ PrefabInstance:
     - target: {fileID: 8655409013382654915, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655409013382654915, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655409013382654915, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655409013382654915, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655409013382654915, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655409013382654915, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.5625
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655409013382654915, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093330998367837518, guid: 90f44d81216d3d34482ffaeaa1a09c81, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -49,3 +49,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Shield
+    uniqueID: 2090792021
+    locked: 0

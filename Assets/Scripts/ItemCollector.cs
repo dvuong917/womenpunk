@@ -12,7 +12,7 @@ public class ItemCollector : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField]private Text secretFileCountText;
  
-    private float secretFileLeft=1;
+    private float secretFileLeft=6;
     [SerializeField]private FileSpawner fileSpawner;
 
 
@@ -34,9 +34,10 @@ public class ItemCollector : MonoBehaviour
             Debug.Log("colided with secret file");
             Destroy(coll.gameObject);
             secretFileLeft--;
-            secretFileCountText.text="Files left to collect: "+secretFileLeft;
 
-            if(secretFileLeft==0){
+            if(secretFileLeft<0){
+                secretFileCountText.text="You've collected enough Intel and gained a Shield ;)";
+
                 if(secretFileCountText!=null){
                     // Destroy(secretFileCountText);
                     GameObject.Find("Secret File Spawner").GetComponent<FileSpawner>().enabled=false;
@@ -44,6 +45,9 @@ public class ItemCollector : MonoBehaviour
                     Debug.Log("no files left to collect, reflect phase true");
 
                 }                
+            }else{
+                secretFileCountText.text="Files left to collect: "+secretFileLeft;
+
             }
 
         }

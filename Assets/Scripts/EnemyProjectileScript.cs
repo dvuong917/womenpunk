@@ -8,11 +8,17 @@ public class EnemyProjectileScript : MonoBehaviour
     public float force;
     private float timer;
     // Start is called before the first frame update
+    public bool shootRight;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Vector3 direction = transform.position;
-        rb.velocity = new Vector2(Mathf.Abs(direction.x), 0).normalized * force;
+        if (shootRight) {
+            rb.velocity = new Vector2(Mathf.Abs(direction.x), 0).normalized * force;
+        }
+        else {
+            rb.velocity = new Vector2(-Mathf.Abs(direction.x), 0).normalized * force;
+        }
     }
 
     // Update is called once per frame

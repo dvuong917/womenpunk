@@ -30,9 +30,10 @@ public class EnemyShooter : MonoBehaviour
     }
 
     void shoot()
-    {
-        var temp = Instantiate(bullet, bulletPos.position, Quaternion.identity);
-        Destroy(temp, 4.0f);
+    {   if(!BossDeath.isDead){
+            var temp = Instantiate(bullet, bulletPos.position, Quaternion.identity);
+            Destroy(temp, 4.0f);
+        }
     } 
 
 }

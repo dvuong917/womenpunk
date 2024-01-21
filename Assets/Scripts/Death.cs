@@ -29,9 +29,14 @@ public class Death : MonoBehaviour
             if(coll.gameObject.CompareTag("BossBullet")){
                 Debug.Log("bounce with bossBullet");
                 coll.gameObject.GetComponent<CircleCollider2D>().isTrigger=false;
+               
             }
         }
-        else if(!ItemCollector.reflectPhase && coll.gameObject.CompareTag("Traps")||coll.gameObject.CompareTag("BossBullet")){
+        else if(!ItemCollector.reflectPhase && (coll.gameObject.CompareTag("Traps")||coll.gameObject.CompareTag("BossBullet"))){
+            Debug.Log("collided with trap");
+            Die();
+        }
+        else if(coll.gameObject.CompareTag("Traps")){
             Debug.Log("collided with trap");
             Die();
         }
@@ -41,10 +46,8 @@ public class Death : MonoBehaviour
     private void Die(){
         Debug.Log("player died");
         spriteRenderer.color=Color.red;
+        anim.SetTrigger("Kill Player");
         rb.bodyType = RigidbodyType2D.Static;
-
-        
-        Restart();
 
     }
 
