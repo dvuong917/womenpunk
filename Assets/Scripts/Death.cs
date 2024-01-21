@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
@@ -9,6 +10,9 @@ public class Death : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator anim;
     private Rigidbody2D rb;
+
+    private Text deathCounter;
+    private int deathCount = 0;
 
     private Color color;
     void Start()
@@ -21,7 +25,7 @@ public class Death : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        deathCounter.text = deathCount.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D coll){
@@ -42,7 +46,7 @@ public class Death : MonoBehaviour
         Debug.Log("player died");
         spriteRenderer.color=Color.red;
         rb.bodyType = RigidbodyType2D.Static;
-
+        deathCount += 1;
         
         Restart();
 
